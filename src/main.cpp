@@ -15,6 +15,7 @@
 #define led 12
 #define button 10
 #define buzzer 5  
+#define IR_PIN 3
 
 //default Rx pin 11 
 
@@ -42,7 +43,7 @@ pinMode(buzzer,OUTPUT);
 pinMode(led,OUTPUT);
 pinMode(IN3,OUTPUT);//motor
 pinMode(IN4,OUTPUT);
-pinMode(3,INPUT);// IR 
+pinMode(IR_PIN,INPUT);// IR 
 Buzzer(2);
 }
 
@@ -155,7 +156,7 @@ int  D_Reading(){
  else if(distance <= 2) {
     distance = 2;
   }
- IR = digitalRead(3);
+ IR = digitalRead(IR_PIN);
 Serial.print("counter variable  :  ULT sensor  :  IR sensor ");
 Serial.print(" ------ ");
 Serial.print(counter);
